@@ -1,0 +1,92 @@
+.memory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+
+  &-small {
+    width: 43vw;
+  }
+}
+
+.memory-logo {
+  display: block;
+  width: 77.78%;
+  position: relative;
+
+  &-big {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+}
+
+.memory-game-title {
+  position: relative;
+  transform: translateY(-13%);
+  color: white;
+  text-transform: uppercase;
+  background: url("../images/redbg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  font-family: MarkPro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-origin: border-box;
+  padding: 4.5%;
+
+  &-big {
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.5s;
+  }
+}
+
+.memory-game-title-img {
+  width: 100%;
+}
+
+.memory-decor {
+  position: absolute;
+}
+
+.memory-decor-1 {
+  top: 20%;
+  left: -2%;
+  // transform: rotate(-10deg);
+  width: 15.56%;
+
+  &-big {
+    -webkit-animation: roll-in-top 1s ease-out both;
+    animation: roll-in-top 1s ease-out both;
+    animation-delay: 0.5s;
+  }
+}
+
+.memory-decor-2 {
+  bottom: 15%;
+  right: -3%;
+  width: 13.33%;
+
+  &-big {
+    -webkit-animation: roll-in-top 1s ease-out both;
+    animation: roll-in-top 1s ease-out both;
+    animation-delay: 0.75s;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .memory {
+    width: 25vw;
+
+    &-small {
+      width: 30vw;
+      flex-grow: 1;
+    }
+  }
+}

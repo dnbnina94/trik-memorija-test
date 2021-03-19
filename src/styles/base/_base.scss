@@ -1,0 +1,252 @@
+html {
+  font-size: 10px;
+}
+
+@font-face {
+  font-family: MarkPro;
+  src: url("/fonts/FontFont_FF.Mark.Pro.Black.otf");
+}
+
+@font-face {
+  font-family: MonstroSolid;
+  src: url("/fonts/Monstro Solid.ttf");
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  background-color: $main-orange;
+  background: url(../images/background-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // min-width: 100vw;
+  // min-height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+.container {
+  max-width: 50rem;
+  padding: 0 $m-size;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .container {
+    padding: 0;
+  }
+}
+
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.margin-y {
+  margin-top: $l-size;
+  margin-bottom: $l-size;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  background-color: darken($main-orange, 10%);
+  border-bottom: 0.5rem solid darken($main-orange, 20%);
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  padding: $s-size 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.mt {
+  &-medium {
+    margin-top: $m-size;
+  }
+
+  &-large {
+    margin-top: $l-size;
+  }
+}
+
+.mb {
+  &-0 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.bb-none {
+  border-bottom: none !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.game-wrapper-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  &-2 {
+    justify-content: center;
+  }
+}
+
+.game-wrapper {
+  width: 100%;
+}
+
+.game-finished-btn {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-origin: border-box;
+  color: white;
+  font-family: MonstroSolid;
+  font-size: 4vw;
+  width: 56vw;
+  padding: 1.5vw;
+  margin-top: 1vw;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  transform: scale(1);
+
+  &-blue {
+    margin-top: 5vw;
+    background-image: url(../images/bluebg2.png);
+  }
+
+  &-red {
+    background-image: url(../images/redbg3.png);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.app-wrapper {
+  // padding: 2vw 0;
+  // position: relative;
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.party-smiley {
+  position: absolute;
+  width: 33vw;
+  top: 18vh;
+  right: 0;
+
+  // transform: translateX(-50%);
+}
+
+.icons-wrapper {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  display: flex;
+  z-index: 1;
+
+  img {
+    width: 10vw;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .homeicon-img {
+    height: 9vw;
+    margin-right: 1vw;
+  }
+
+  .sound-img {
+    height: 9vw;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  body {
+    display: flex;
+    position: static;
+    background: url(../images/background.png);
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  .app-wrapper {
+    position: relative;
+  }
+
+  .game-container {
+    flex-direction: row;
+    padding: 2vw 0;
+    align-items: stretch;
+  }
+
+  .game-wrapper {
+    width: 50%;
+  }
+
+  .game-finished-btn {
+    width: 26vw;
+    font-size: 2vw;
+    padding: 1vw;
+  }
+
+  .party-smiley {
+    position: absolute;
+    width: 20vw;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icons-wrapper {
+    top: 1vw;
+    left: 1vw;
+
+    img {
+      width: 5vw;
+    }
+
+    .homeicon-img {
+      height: 4.5vw;
+      margin-right: 0.5vw;
+    }
+
+    .sound-img {
+      height: 4.5vw;
+    }
+  }
+}

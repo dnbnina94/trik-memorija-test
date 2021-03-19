@@ -1,0 +1,452 @@
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // padding-top: 20vw;
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.splash-screen-info {
+  width: 100%;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  // padding-top: 20vw;
+  flex-shrink: 0;
+}
+
+.splash-screen-logo-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1vw;
+}
+
+.awards-wrapper {
+  flex: 0 0 36vw;
+  display: none;
+  justify-content: center;
+  // margin-bottom: 6.5vw;
+  margin-top: 14vw;
+  align-self: center;
+
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.awards-info-wrapper {
+  text-transform: uppercase;
+  background-image: url(../images/bigredbg.png);
+  background-size: 100% 100%;
+  line-height: 1;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: MonstroSolid;
+  padding: 5vw 15vw;
+  position: relative;
+  text-align: center;
+
+  top: -21vw;
+  margin-bottom: -21vw;
+
+  p {
+    margin: 0;
+  }
+}
+
+.awards-info {
+  &-1 {
+    font-size: 6.2vw;
+  }
+
+  &-2 {
+    font-size: 3.46vw;
+    padding: 0.5vw 0 3vw 0;
+  }
+
+  &-3 {
+    font-size: 6.62vw;
+  }
+
+  &-4 {
+    font-size: 4.64vw;
+    line-height: 1.2;
+  }
+}
+
+.awards-info-img {
+  position: absolute;
+
+  &-1 {
+    position: relative;
+    width: 35vw;
+    left: -3vw;
+  }
+
+  &-2 {
+    width: 35vw;
+    top: 0;
+    left: -7vw;
+    transform: translateY(-47%);
+  }
+
+  &-3 {
+    bottom: 1vw;
+    left: -2vw;
+    width: 23vw;
+  }
+
+  &-4 {
+    width: 25vw;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-5 {
+    top: -12vw;
+    right: -2vw;
+    width: 42vw;
+    transform: rotate(22deg);
+  }
+}
+
+.racun-wrapper {
+  flex: 0 0 36vw;
+  display: none;
+  justify-content: center;
+  margin-top: 14vw;
+  align-self: center;
+
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.racun-info-wrapper {
+  text-align: center;
+  text-transform: uppercase;
+  background-image: url(../images/bigbluebg.png);
+  background-size: 100% 100%;
+  font-size: 3.5vw;
+  line-height: 1.375;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: MonstroSolid;
+  padding: 5vw 6vw 3vw 6vw;
+  position: relative;
+
+  top: -11vw;
+  margin-bottom: -11vw;
+
+  p {
+    margin: 0;
+  }
+}
+
+.racun-info-img {
+  z-index: -1;
+  width: 52vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.splash-screen-logo {
+  display: block;
+  width: 35vw;
+}
+
+.splash-screen-game-title {
+  position: relative;
+  top: -2vw;
+  color: white;
+  text-transform: uppercase;
+  background: url(../images/redbg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  font-family: MarkPro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-origin: border-box;
+  padding: 2vw 5vw;
+}
+
+.splash-screen-game-title-img {
+  width: 35vw;
+}
+
+.splash-screen-decor {
+  position: absolute;
+}
+
+.splash-screen-decor-1 {
+  top: 20%;
+  left: 0;
+  transform: rotate(-10deg);
+  width: 7vw;
+}
+
+.splash-screen-decor-2 {
+  bottom: 15%;
+  right: 0;
+  width: 6vw;
+}
+
+.splash-screen-side-img {
+  z-index: -1;
+  width: 22vw;
+  position: absolute;
+
+  &-1 {
+    bottom: 6vw;
+    left: 5vw;
+
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &-2 {
+    top: 5vw;
+    right: 6vw;
+
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+}
+
+.splash-screen-play-btn-wrapper {
+  display: inline-flex;
+  left: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: url(../images/redbg2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-origin: border-box;
+  text-transform: uppercase;
+  font-family: MarkPro;
+  cursor: pointer;
+  padding: 2vh 1vw;
+  margin-top: 3vh;
+
+  // position: relative;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 1.5s;
+
+  &:hover {
+    .splash-screen-smiley-img-1,
+    .splash-screen-smiley-img-2 {
+      -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+      animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    }
+  }
+}
+
+.splash-screen-smiley-img-1,
+.splash-screen-smiley-img-2 {
+  width: 10vw;
+}
+
+.splash-screen-play-btn {
+  width: 25vw;
+  padding: 0 0.5vw;
+}
+
+.fixed-buttons-wrapper {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  margin: 0 auto;
+  width: 70vw;
+
+  -webkit-animation: slide-in-top-popup 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top-popup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 1.5s;
+}
+
+.button-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.fixed-buttons-button {
+  cursor: pointer;
+  color: white;
+  background-image: url(../images/red.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: MonstroSolid;
+  text-transform: uppercase;
+  font-size: 2vw;
+  padding: 1vw 1.5vw 2vw 1.5vw;
+  font-size: 4vw;
+  padding: 2vw 3.5vw 3vw 3.5vw;
+
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: white !important;
+    text-decoration: none !important;
+  }
+}
+
+.splash-screen-swiper-wrapper {
+  display: block;
+
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .splash-screen {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 0;
+  }
+
+  .splash-screen-info {
+    display: flex;
+    width: auto;
+    padding-top: 0;
+  }
+
+  .splash-screen-side-img {
+    width: 20vw;
+    position: static;
+  }
+
+  .splash-screen-logo-wrapper {
+    padding-top: 1vw;
+  }
+
+  .splash-screen-play-btn-wrapper {
+    margin-top: 11vw;
+  }
+
+  .splash-screen-play-btn {
+    width: 10vw;
+  }
+
+  .splash-screen-smiley-img-1,
+  .splash-screen-smiley-img-2 {
+    width: 4vw;
+  }
+
+  .awards-wrapper,
+  .racun-wrapper {
+    display: flex;
+  }
+
+  .splash-screen-swiper-wrapper {
+    display: none;
+  }
+
+  .racun-info-wrapper {
+    font-size: 1.25vw;
+    padding: 2vw 2vw 1vw 2vw;
+    display: inline-block;
+    top: 0;
+    margin-bottom: 0;
+  }
+
+  .racun-info-img {
+    width: 65%;
+    position: absolute;
+    top: 0;
+    right: 2vw;
+    left: auto;
+    transform: translateY(-70%);
+  }
+
+  .awards-info-wrapper {
+    text-align: left;
+    top: 0;
+    margin-bottom: 0;
+    padding: 2vw 3vw 2.5vw 3vw;
+  }
+
+  .awards-info {
+    &-1 {
+      font-size: 2.62vw;
+    }
+
+    &-2 {
+      font-size: 1.46vw;
+      padding: 0.5vw 0vw 1vw 2vw;
+    }
+
+    &-3 {
+      font-size: 2.35vw;
+    }
+
+    &-4 {
+      font-size: 1.64vw;
+    }
+  }
+
+  .awards-info-img {
+    &-1 {
+      position: absolute;
+      top: -1vw;
+      left: -2vw;
+      z-index: -2;
+      width: 55%;
+      transform: translateY(-70%);
+    }
+
+    &-2 {
+      top: -1vw;
+      left: -2vw;
+      width: 70%;
+      transform: translateY(-55%);
+    }
+
+    &-3 {
+      top: -1vw;
+      right: 6vw;
+      left: auto;
+      width: 30%;
+      transform: translateY(-70%);
+    }
+
+    &-4 {
+      bottom: 0;
+      right: 3vw;
+      width: 30%;
+      transform: translateY(-25%);
+      z-index: 1;
+    }
+
+    &-5 {
+      top: auto;
+      bottom: 0;
+      left: 4vw;
+      width: 60%;
+      transform: translateY(48%);
+    }
+  }
+
+  .fixed-buttons-wrapper {
+    width: 50vw;
+  }
+
+  .fixed-buttons-button {
+    font-size: 2vw;
+    padding: 1vw 1.5vw 2vw 1.5vw;
+  }
+}

@@ -1,0 +1,17 @@
+@import "./base/settings";
+@import "./base/base";
+@import "./base/animations";
+
+@import "./components/header";
+@import "./components/time";
+@import "./components/cards";
+@import "./components/game-finished";
+@import "./components/results";
+@import "./components/splash-screen";
+@import "./components/memory";
+@import "./components/save-results";
+@import "./components/title";
+@import "./components/loader";
+@import "./components/custom-modal";
+
+@import "./custom-swiper";

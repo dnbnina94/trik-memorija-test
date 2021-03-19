@@ -1,0 +1,11 @@
+.header {
+  background-color: darken($main-orange, 10%);
+}
+
+.header__title {
+  color: white;
+  margin: 0;
+  padding: $m-size 0;
+  font-size: $m-size;
+  text-transform: uppercase;
+}

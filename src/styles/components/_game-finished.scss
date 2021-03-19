@@ -1,0 +1,19 @@
+.user-data {
+  input {
+    width: 100%;
+    padding: $m-size $s-size;
+    // padding: 0;
+    border: none;
+    outline: none;
+    margin-top: 0.5rem;
+    display: block;
+    background-color: lighten($main-orange, 10%);
+    box-sizing: border-box;
+  }
+
+  label {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

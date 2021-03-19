@@ -1,0 +1,91 @@
+.time-container {
+  // margin-top: 1.5vh;
+}
+
+.time-mobile {
+  display: block;
+}
+
+.time-desktop {
+  display: none;
+}
+
+.time-wrapper {
+  background-image: url(../images/bluebg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-origin: border-box;
+  display: flex;
+  width: 56vw;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1vw;
+  // margin-bottom: 3vw;
+  position: relative;
+}
+
+.time-clock-img {
+  width: 12vw;
+  position: relative;
+}
+
+.time-info {
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: bold;
+  font-family: MarkPro;
+  position: relative;
+  top: 0.2vw;
+  font-size: 6.5vw;
+  margin-left: 2vw;
+  width: 35.5vw;
+}
+
+.time-result-label {
+  color: $blue;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: MonstroSolid;
+  top: 0;
+  left: 0;
+  font-size: 6vw;
+  line-height: 1;
+  position: relative;
+  transform: translateY(40%);
+  padding-right: 0.5vw;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .time-container {
+    display: block;
+    margin-top: 5.5vw;
+  }
+
+  .time-mobile {
+    display: none;
+  }
+
+  .time-desktop {
+    display: block;
+  }
+
+  .time-clock-img {
+    width: 6vw;
+  }
+
+  .time-info {
+    font-size: 3vw;
+    margin-left: 1vw;
+    width: 16.5vw;
+  }
+
+  .time-wrapper {
+    width: 26vw;
+  }
+
+  .time-result-label {
+    font-size: 2.8vw;
+  }
+}

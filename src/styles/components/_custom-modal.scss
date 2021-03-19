@@ -1,0 +1,199 @@
+.ReactModal__Content {
+  position: static !important;
+  max-width: 80vw;
+  border: none !important;
+  background: url(../images/background.png) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: MonstroSolid;
+  padding: 3.5vw 3.5vw 0vw 3.5vw !important;
+  inset: 6vw 6vw !important;
+  border-radius: 1vw !important;
+  color: #343a40;
+  font-size: 3vw;
+
+  -webkit-animation: slide-in-top-popup 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top-popup 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.4) !important;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal-title {
+  text-align: center;
+  font-size: 3.8vw;
+}
+
+.custom-modal-subtitle {
+  font-size: 3.5vw;
+}
+
+.custom-modal-link {
+  color: $blue;
+  text-decoration: none;
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.custom-modal-list {
+  padding-left: 5vw;
+}
+
+.custom-modal-bottom-filler {
+  height: 6vw;
+}
+
+.custom-input {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+      ~ .checkmark-checkbox {
+        background-color: $bordeaux;
+
+        &:after {
+          display: inline-block;
+          width: 3vw;
+          height: 3vw;
+          background-image: url(../images/checkmark.svg);
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .label {
+    flex: 1;
+  }
+
+  .checkmark-checkbox {
+    height: 4.5vw;
+    width: 4.5vw;
+    background-color: $gray;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+
+  .checkmark-text {
+    color: $black;
+    font-size: 3.5vw;
+    padding-left: 2vw;
+    line-height: 1;
+  }
+
+  .checkmark-required {
+    color: $bordeaux;
+  }
+
+  &:hover {
+    .checkmark-checkbox {
+      background-color: $dark-gray;
+      transition: 0.2s;
+    }
+  }
+}
+
+.modal-btn {
+  width: 37vw;
+  font-size: 4.5vw;
+  margin: 4vw auto 0 auto;
+  transition: 0.2s;
+
+  &-greyed {
+    cursor: not-allowed;
+    filter: grayscale(100%);
+  }
+}
+
+.custom-modal-info {
+  text-align: center;
+  font-size: 3vw;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .ReactModal__Content {
+    padding: 2vw 2vw 0vw 2vw !important;
+    inset: 2vw 25vw !important;
+    border-radius: 1vw !important;
+    font-size: 1vw;
+    max-width: 40vw;
+  }
+
+  .custom-modal-info {
+    font-size: 1.3vw;
+  }
+
+  .custom-input {
+    input {
+      &:checked {
+        ~ .checkmark-checkbox {
+          &:after {
+            width: 1vw;
+            height: 1vw;
+          }
+        }
+      }
+    }
+
+    .checkmark-checkbox {
+      height: 1.5vw;
+      width: 1.5vw;
+    }
+
+    .checkmark-text {
+      font-size: 1.3vw;
+      padding-left: 0.5vw;
+    }
+  }
+
+  .modal-btn {
+    width: 15vw;
+    font-size: 1.5vw;
+    margin: 1.5vw auto 0 auto;
+  }
+
+  .custom-modal-list {
+    padding-left: 2vw;
+  }
+
+  .custom-modal-title {
+    text-align: center;
+    font-size: 1.8vw;
+  }
+
+  .custom-modal-subtitle {
+    font-size: 1.5vw;
+  }
+
+  .custom-modal-bottom-filler {
+    height: 2.5vw;
+  }
+}

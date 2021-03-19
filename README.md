@@ -1,1 +1,1 @@
-# trik-memorija-test
+# banini-memory-game-prototype

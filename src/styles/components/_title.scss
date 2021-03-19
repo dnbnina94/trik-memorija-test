@@ -1,0 +1,112 @@
+.title {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  z-index: 2;
+
+  &-fixed {
+    margin: 8vw auto 3vw auto;
+    cursor: pointer;
+
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 2s;
+  }
+}
+
+.title-img {
+  width: 20vw;
+
+  &-big {
+    width: 20vw;
+  }
+}
+
+.title-content {
+  background-image: url(../images/bluebg.png);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  color: white;
+  text-transform: uppercase;
+  font-family: MonstroSolid;
+  font-size: 4vw;
+  padding: 1vw 2vw;
+  position: relative;
+  top: -6.8vw;
+  margin-bottom: -6.8vw;
+
+  &-big {
+    font-size: 5vw;
+    padding: 1vw 4vw;
+    top: -6.8vw;
+    margin-bottom: 0;
+  }
+
+  &-results {
+    padding: 1vw 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  padding: 0 3vw;
+  width: 5vw;
+  height: 5vw;
+  transition: 0.2s;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+
+  &-forward {
+    transform: scale(-1);
+
+    &:hover {
+      transform: scale(-1.3);
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .title {
+    &-fixed {
+      cursor: pointer;
+      position: fixed;
+      bottom: 2.5vw;
+      right: 2vw;
+      margin: 0;
+
+      .title-content {
+        margin-bottom: -3.8vw;
+      }
+    }
+  }
+  .title-img {
+    width: 8vw;
+
+    &-big {
+      width: 13vw;
+    }
+  }
+  .title-content {
+    font-size: 1.8vw;
+    top: -2.8vw;
+
+    &-big {
+      font-size: 2.5vw;
+      top: -4.8vw;
+    }
+  }
+
+  .arrow {
+    padding: 0 2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
